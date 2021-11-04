@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  /* ### Neutral */
+  --Light-gray: hsl(204, 43%, 93%);
+  --Grayish-blue: hsl(218, 22%, 67%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: var(--Light-gray);
+}
+.container .content {
+  width: 650px;
+  border-radius: 50px;
+}
+.topside {
+  padding: 40px;
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.topside h2 {
+  font-weight: 700;
+  color: var(--cyan);
+  margin-bottom: 20px;
+}
+.topside h3 {
+  color: var(--bright-yellow);
+  margin-bottom: 10px;
+}
+.topside p {
+  color: var(--Grayish-blue);
+  font-size: 16px;
+}
+.botside {
+  /* display: grid; */
+  color: white;
+  background-color: var(--cyan);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.botside::after {
+  display: block;
+  content: " ";
+  clear: both;
+}
+.botside .sub {
+  padding: 40px;
+  width: 50%;
+  float: left;
+}
+.sub h4 {
+  margin-bottom: 10px;
+}
+.sub h1 span {
+  font-size: 15px;
+  font-weight: lighter;
+  color: var(--Light-gray);
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.sub p {
+  font-weight: lighter;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+.sub .btn {
+  padding: 10px 85px;
+  border-radius: 5px;
+  background-color: var(--bright-yellow);
+  box-shadow: 2px 2px 5px gray;
+  text-decoration: none;
+  color: white;
+}
+.btn:hover {
+  letter-spacing: 2px;
+}
+.botside .ben {
+  padding: 40px;
+  background-color: white;
+  mix-blend-mode: soft-light;
+  z-index: 0;
+  width: 50%;
+  float: right;
+}
+.ben h4,
+li {
+  mix-blend-mode: difference;
+}
+.ben h4 {
+  margin-bottom: 10px;
+}
+.ben ul li {
+  list-style: none;
+  font-size: 15px;
+  font-weight: lighter;
+}
+footer {
+  bottom: 0;
+  position: absolute;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+@media screen and (max-width: 450px) {
+  html {
+    font-size: 10px;
+  }
+  .botside {
+    display: grid;
+  }
+  .button {
+      margin-top: 2.5rem;
+  }
+}
